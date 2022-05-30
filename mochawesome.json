@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-30T15:52:26.978Z",
+    "end": "2022-05-30T15:52:59.395Z",
+    "duration": 32417,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ef0d8792-7aaf-4310-a565-32e7a2f76c99",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.spec.js",
+      "file": "cypress/integration/cadastro.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "91a80d65-b0e1-47c5-a88c-281d5729582b",
+          "title": "Cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando informar os dados email validos então o email sera cadastro com sucesso",
+              "fullTitle": "Cadastro Quando informar os dados email validos então o email sera cadastro com sucesso",
+              "timedOut": null,
+              "duration": 28755,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://automationpractice.com\");\ncy.get('a[title=\"Log in to your customer account\"]').click();\ncy.get('input[id=\"email_create\"]').type(chance.email());\ncy.get('button[id=\"SubmitCreate\"]').click();\ncy.get('#id_gender1').type('Mrs');\ncy.wait(6000);\ncy.get('input[name=\"customer_firstname\"]').type(chance.first());\ncy.get('input[name=\"customer_lastname\"]').type(chance.last());\ncy.get('input[id=\"passwd\"]').type('duda@126');\ncy.get('select#days').select('18', {\n  force: true\n});\ncy.get('select#months').select('April', {\n  force: true\n});\ncy.get('select#years').select('2022', {\n  force: true\n});\ncy.get('input[name=\"newsletter\"]').check();\ncy.get('input[name=\"optin\"]').check();\ncy.get('input[id=\"company\"]').type('Thunders');\ncy.get('input[id=\"address1\"]').type('Ocean Blvd');\ncy.get('input[id=\"address2\"]').type('Rua 3 Quadra 233 lote 2');\ncy.get('input[id=\"city\"]').type('Boca Ratton');\ncy.get('select#id_state').select('Florida', {\n  force: true\n});\ncy.get('input[id=\"postcode\"]').type('28396');\ncy.get('select#id_country').select('United States', {\n  force: true\n});\ncy.get('textarea[id=\"other\"]').type('Sem Complemento');\ncy.get('input[id=\"phone\"]').type('61 981998723');\ncy.get('input[id=\"phone_mobile\"]').type('61 984529559');\ncy.get('input[id=\"alias\"]').type('Miame');\ncy.get('button[id=\"submitAccount\"]').click(); // eu espero que minha aplicação seja direcionada para a pagina de index.php?control=my-account\n// url\n// deve conter index\ncy.url().should('contain', 'index');",
+              "err": {},
+              "uuid": "d33d137e-7bc7-454f-b025-5a8e0c5dd7a8",
+              "parentUUID": "91a80d65-b0e1-47c5-a88c-281d5729582b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d33d137e-7bc7-454f-b025-5a8e0c5dd7a8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28755,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
